@@ -18,3 +18,33 @@
 // </div>
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
+const cardEntry =document.querySelector(".cards-container")
+function cardMaker(event){
+    cardDiv = document.createElement("div")
+    headlineDiv = document.createElement("div")
+    authorDiv = document.createElement("div")
+    authorImgDiv = document.createElement ("div")
+    authorImg = document.createElement("img")
+    authodName =document.createElement("span")
+
+    headlineDiv .textContent = event .headline
+    authorImg .scr = event.authorPhoto
+    authorname .textContent = event.authodName
+
+    cardDiv.appendChild(headlineDiv, authorDiv, authorImgDiv, authorImg, authorname);
+    authorDiv .appendChild(authorImgDiv,authorImg, authorname);
+    cardDiv.appendChild(headlineDiv, authorDiv, authorImgDiv, authorImg, authorname);
+    authorDiv.appendChild(authorImg, authorname);
+    authorImgDiv.appendChild(authorImg);
+
+    cardDiv.classList.add('card');
+    headlineDiv.classList.add('headline');
+    authorDiv.classList.add('author');
+    authorImgDiv.classList.add('img-container');
+
+    cardEntry.appendChild(cardDiv)
+    return cardDiv
+}
+
+
+
