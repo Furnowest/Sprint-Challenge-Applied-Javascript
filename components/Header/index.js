@@ -13,26 +13,30 @@
 
 function Header() {
    const div =document.createElement("div");
-   div.classList.add(header);
+   div.classList.add(".header");
 
    const span1 =document.createElement("span");
    span1.classList.add("date");
    span1.textContent ="SMARCH 28. 2019";
 
    const  hone =document.createElement("h1")
-   hone.textContent.createElement("lambda Times");
+   hone.textContent ="Lambda Times";
 
    const span2 =document.createElement("span");
    span2.classList.add("temp");
    span2.textContent = "98";
 
+   ElementArray = [span1, hone, span2];
+
  div.appendChild(span1);
  div.appendChild(hone);
  div.appendChild(span2)
 
+ ElementArray.forEach(el => div.appendChild(el));
 
 return div;
-    
-}
-const headercontainer = document.querySelectorAll("..header-container");
-headercontainer.appendChild(header);
+};
+const headerEntry = document.querySelector(".header-container").appendChild(Header());
+
+
+
